@@ -1,3 +1,16 @@
 {
-  "packages": {}
+  "packages": {
+    "null": {
+      "displayName": null,
+      "author": "8zvw0tmb",
+      "versions": {
+        "0.0.0": {
+          "file": "packages/koil-package-pkg65f1c2r4ifv88tmk5xgmu80k.kpak",
+          "sha256": "645ef5c5240b9ee99d4a29950d0870ad854cc3c23d7e3e84fc2f051bbb0c28b9",
+          "targetKoilVersion": null,
+          "authorId": null
+        }
+      }
+    }
+  }
 }
