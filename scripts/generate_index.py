@@ -15,8 +15,12 @@ def sha256_file(path):
 
 def read_package_json(zip_path):
     with zipfile.ZipFile(zip_path, "r") as z:
-        with z.open("package.json") as f:
-            return json.loads(f.read().decode("utf-8"))
+        for name in z.namelist():
+            if name.endswith("/package.json") or name == "package.json":
+                with z.open(name) as f:
+                    return json.loads(f.read().decode("utf-8"))
+
+    raise FileNotFoundError("package.json not found")
 
 index = {
     "packages": {}
