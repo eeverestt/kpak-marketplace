@@ -3,7 +3,7 @@ import json
 import zipfile
 import hashlib
 
-PACKAGE_DIR = "packages"
+PACKAGES_DIR = "packages"
 OUTPUT_FILE = "index.json"
 
 def sha256_file(path):
