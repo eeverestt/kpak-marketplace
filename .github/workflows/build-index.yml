@@ -1,17 +1,18 @@
-name: build KPak Index
+name: Build KPak Index
 
 on:
   push:
     paths:
       - "packages/**"
       - "scripts/**"
+      - ".github/workflows/build-index.yml"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  build_index:
+  build-index:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,7 +22,8 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-            python-version: "3.1.1"
+          python-version: "3.x"
+          cache: "pip"
 
       - name: Generate index.json
         run: |
